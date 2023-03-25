@@ -1,6 +1,7 @@
 const bodyEl = document.querySelector("body");
 
-bodyEl.addEventListener("mousemove",(event)=>{
+bodyEl.addEventListener("mousemove", (event) => {
+
     const xPos = event.offsetX;
     const yPos = event.offsetY;
 
@@ -10,13 +11,12 @@ bodyEl.addEventListener("mousemove",(event)=>{
     spanEl.style.top = yPos + "px";
 
     const size = Math.random() * 100;
-
-    spanEl.style.widht = size +"px";
-    spanEl.style.height = size+ "px";
+    
+    spanEl.style.width = size + "px";
+    spanEl.style.height = size + "px";
 
     bodyEl.appendChild(spanEl);
-
-    setTimeout(()=>{
+    setTimeout(() => {
         spanEl.remove();
     }, 3000)
-})
+});
